@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="./Images/favicon.png" type="image/x-icon" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n-ary decision maker</title>
+
+    <style>
+        body {
+            margin: 2%;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: aquamarine;
+        }
+
+        canvas {
+            margin: 80px;
+        }
+
+        p {
+            align-items: center;
+            width: 70%;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <p>
+        God I hate deciding. Especially when it comes to food or purchases. "Should I
+        have Burger King? Or should I have Taco Bell?" "Should I buy this thing now or wait until it goes on sale?" What
+        if it ends up going badly? What if I regret what I chose? My point is, there are a lot of
+        decisions I have to make and it would be easier if I could just farm that out to someone or something else to do
+        for me. That way, I can't be held accountable for my choice, since I just did whatever someone suggested I do.
+    </p>
+
+    <p>
+        This n-ary decision maker can choose between 2 or more decisions. Just enter the options in front of you in the
+        text box, hit "add" and then start the wheel. You can pick whatever it lands on and know that it wasn't
+        <i>your</i> decision, and that you aren't morally responsible for the choice, or you can be disappointed by the
+        outcome and know which outcome you really want.
+    </p>
+    <form>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="name">Option: </label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" name="option" id="option" placeholder="Burgers or Pizza?"
+                    required>
+            </div>
+        </div>
+
+    </form>
+    <div class="container">
+        <div class="col-md-12 text-center">
+            <button id="add" class="btn btn-primary">Add</button>
+            <button id="start" class="btn btn-success">Start</button>
+        </div>
+    </div>
+
+    <button id="restart" class="btn btn-danger">Spin Again</button>
+
+    <ul class="list-group" id="choiceList">
+    </ul>
+
+    <canvas id="game" width="800" height="800"></canvas>
+    <script src="index.js"></script>
+</body>
+
+</html>
