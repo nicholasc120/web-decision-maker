@@ -35,7 +35,11 @@ addButton.addEventListener("click", () => {
   const listItem = document.createElement("li");
   const listText = document.createElement("span");
   listItem.appendChild(listText);
-  let color = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  var x = Math.round(0xffffff * Math.random()).toString(16);
+  var y = 6 - x.length;
+  var z = "000000";
+  var z1 = z.substring(0, y);
+  var color = "#" + z1 + x;
 
   listText.style.color = color;
   listText.textContent = myItem;
